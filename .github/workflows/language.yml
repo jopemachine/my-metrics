@@ -1,0 +1,45 @@
+# # Visit https://github.com/lowlighter/metrics/blob/master/action.yml for full reference
+name: Metrics - Language
+
+on:
+  # Schedule updates (each hour)
+  # schedule: [{cron: "0 * * * *"}]
+
+  # Schedule updates (run every 48 hour)
+  schedule: [{cron: "0 */48 * * *"}]
+
+  workflow_dispatch:
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jopemachine/metrics@master
+        with:
+          # Gist option
+          filename: metrics/language.svg
+          config_output: gist
+          committer_gist: 1013f1ecc0aab84223dd7a79cc020e27
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # Your GitHub token
+          # token: ${{ secrets.METRICS_TOKEN }}
+          # GITHUB_TOKEN is a special auto-generated token restricted to current repository, which is used to push files in it
+          # committer_token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Options
+          user: jopemachine
+          template: classic
+          base: ""
+
+          config_timezone: Asia/Seoul/
+          config_order: languages
+
+          plugin_languages: yes
+          plugin_languages_indepth: yes
+          plugin_languages_ignored: >-
+            html, scss, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell,
+            gnuplot, hack, applescript, RenderScript
+          plugin_languages_details: percentage
+          # plugin_languages_aliases: javascript:JS typescript:TS
+          # plugin_languages_threshold: 1%
+          # plugin_languages_limit: 4

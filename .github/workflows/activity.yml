@@ -1,0 +1,42 @@
+# # Visit https://github.com/lowlighter/metrics/blob/master/action.yml for full reference
+name: Metrics - Activity
+
+on:
+  # Schedule updates (each hour)
+  schedule: [{cron: "0 * * * *"}]
+
+  # Schedule updates (run every 24 hour)
+  # schedule: [{cron: "0 */24 * * *"}]
+
+  workflow_dispatch:
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jopemachine/metrics@master
+        with:
+          # Gist option
+          filename: metrics/activity.svg
+          config_output: gist
+          committer_gist: 1013f1ecc0aab84223dd7a79cc020e27
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # Your GitHub token
+          # token: ${{ secrets.METRICS_TOKEN }}
+          # GITHUB_TOKEN is a special auto-generated token restricted to current repository, which is used to push files in it
+          # committer_token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Options
+          user: jopemachine
+          template: classic
+          base: ""
+
+          config_timezone: Asia/Seoul
+          config_order: activity
+
+          plugin_activity: yes
+          plugin_activity_limit: 10
+          plugin_activity_days: 0    # Keep only events from last 14 days (can be set to 0 to disable limitations)
+          plugin_activity_filter: pr, issue, comment, review # Show all events (use table above to filter events types):  
+          plugin_activity_visibility: public
+          plugin_activity_timestamps: yes

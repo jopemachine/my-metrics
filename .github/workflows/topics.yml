@@ -1,0 +1,43 @@
+# # Visit https://github.com/lowlighter/metrics/blob/master/action.yml for full reference
+name: Metrics - Topics
+
+on:
+  # Schedule updates (each hour)
+  # schedule: [{cron: "0 * * * *"}]
+
+  # Schedule updates (run every 72 hour)
+  # schedule: [{cron: "0 0 */3 * *"}]
+
+  # Schedule updates (run every 1 week)
+  schedule: [{cron: "0 0 * * 0"}]
+
+  workflow_dispatch:
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jopemachine/metrics@master
+        with:
+          # Gist option
+          filename: metrics/topics.svg
+          config_output: gist
+          committer_gist: 1013f1ecc0aab84223dd7a79cc020e27
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # Your GitHub token
+          # token: ${{ secrets.METRICS_TOKEN }}
+          # GITHUB_TOKEN is a special auto-generated token restricted to current repository, which is used to push files in it
+          # committer_token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Options
+          user: jopemachine
+          template: classic
+          base: ""
+
+          config_timezone: Asia/Seoul
+          config_order: topics
+
+          plugin_topics: yes
+          plugin_topics_limit: 0
+          plugin_topics_mode: icons
+          plugin_topics_sort: stars

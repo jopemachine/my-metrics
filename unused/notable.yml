@@ -1,0 +1,44 @@
+# # Visit https://github.com/lowlighter/metrics/blob/master/action.yml for full reference
+name: Metrics - Notable
+
+on:
+  # Schedule updates (each hour)
+  # schedule: [{cron: "0 * * * *"}]
+
+  # Schedule updates (run every 24 hour)
+  schedule: [{cron: "0 */24 * * *"}]
+
+  workflow_dispatch:
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jopemachine/metrics@master
+        with:
+          # Gist option
+          filename: metrics/notable.svg
+          config_output: gist
+          config_padding: 0, 12 + 14%
+          committer_gist: 1013f1ecc0aab84223dd7a79cc020e27
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # Your GitHub token
+          # token: ${{ secrets.METRICS_TOKEN }}
+          # GITHUB_TOKEN is a special auto-generated token restricted to current repository, which is used to push files in it
+          # committer_token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Options
+          user: jopemachine
+          template: classic
+          base: ""
+
+          config_timezone: Asia/Seoul
+          config_order: notable
+
+          plugin_notable: yes
+          plugin_notable_from: all
+          plugin_notable_types: pull_request
+          plugin_notable_indepth: yes
+          plugin_notable_filter: stars:>=100 maintainer:false
+          plugin_notable_repositories: yes
+          # plugin_notable_skipped:
