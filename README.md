@@ -1,15 +1,15 @@
 ##### :octocat: <b>OSS contribution metrics</b>
 
-![](https://github.com/jopemachine/my-metrics/blob/main/metrics/base.svg)
+![](https://github.com/jopemachine/my-metrics/blob/master/metrics/base.svg)
 
 ##### :toolbox: <b>Most used languages</b>
 
-![](https://github.com/jopemachine/my-metrics/blob/main/metrics/language.svg)
+![](https://github.com/jopemachine/my-metrics/blob/master/metrics/language.svg)
 
 ##### :pen: <b>My latest blog posts</b>
 
-[![](https://github.com/jopemachine/my-metrics/blob/main/metrics/rss.svg)](https://jopemachine.github.io/)
+[![](https://github.com/jopemachine/my-metrics/blob/master/metrics/rss.svg)](https://jopemachine.github.io/)
 
 ##### Recent coding habits
 
-![](https://github.com/jopemachine/my-metrics/blob/main/metrics/habits.svg)
+![](https://github.com/jopemachine/my-metrics/blob/master/metrics/habits.svg)
