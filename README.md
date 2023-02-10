@@ -29,3 +29,8 @@
 ##### Contributions
 
 ![](https://github.com/jopemachine/my-metrics/blob/master/metrics/notable.svg)
+
+##### Others
+
+- [npm-stats](https://github.com/jopemachine/npm-stats): My npm packages and their stats
+- [oss-contribtion-table](https://transparent-petalite-9c2.notion.site/df61758c0fb24bae86e8f4017ec1f8fb?v=a8c98280245544419ef8b81972bd30fe): My OSS contribution notion page
