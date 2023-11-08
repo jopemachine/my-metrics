@@ -24,6 +24,24 @@
                                     </svg>
                                     <div class="content">
                                         Opened
+                                        <span class="issue">#60 Implement RaftConfig</span>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <div>opened  in <span class="repo">lablup/raftify</span></div>
+                                </div>
+                                <div class="timestamp">8 Nov 2023, 17:06:27</div>
+                            </section>
+                        </div>
+                        <div class="row fill-width">
+                            <section class="activity">
+                                <div class="field">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                        <path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                                        <path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"/>
+                                    </svg>
+                                    <div class="content">
+                                        Opened
                                         <span class="issue">#59 Revamp abstraction of RaftNode, RaftFacade</span>
                                     </div>
                                 </div>
@@ -179,24 +197,6 @@
                                     <div>2 files changed <span class="code">++50 --6</span></div>
                                 </div>
                                 <div class="timestamp">8 Nov 2023, 14:09:23</div>
-                            </section>
-                        </div>
-                        <div class="row fill-width">
-                            <section class="activity">
-                                <div class="field">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                        <path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
-                                        <path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"/>
-                                    </svg>
-                                    <div class="content">
-                                        Opened
-                                        <span class="issue">#56 Delete `response_queue` after sending response message</span>
-                                    </div>
-                                </div>
-                                <div class="details">
-                                    <div>opened  in <span class="repo">lablup/raftify</span></div>
-                                </div>
-                                <div class="timestamp">8 Nov 2023, 14:08:52</div>
                             </section>
                         </div>
                     </section>
